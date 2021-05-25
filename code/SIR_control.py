@@ -87,6 +87,9 @@ def solve_pmp(beta=0.3, gamma=0.1, x0=0.99, y0=0.01, c1=1., c2=1.e-2, c3=0., yma
         print('Solver failed to converge for c2 = ',c2)
         return 0, 0, 0, 0, 0, 0
         #raise Exception('solve_bvp did not converge')
+    else:
+        print('Solver converged for c2 = ',c2)
+        
     x = result.y[0,:]
     y = result.y[1,:]
     lam1 = result.y[2,:]
